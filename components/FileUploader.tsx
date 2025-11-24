@@ -25,7 +25,7 @@ function FileUploader() {
         } else {
             // toast for error
         }
-    }, []);
+    }, [handleUpload]);
 
     const statusIcons: Record<Status, JSX.Element> = {
         [StatusText.UPLOADING]: (

@@ -31,11 +31,11 @@ function PdfView({url}: {url: string}) {
     useEffect(() => {
         const fetchFile = async () => {
             const response = await fetch(url);
-            const file = await response.blob;
+            const file = await response.blob();
 
             setFile(file);
         };
-
+        
         fetchFile();
     }, [url]);
 
