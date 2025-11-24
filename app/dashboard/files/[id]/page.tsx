@@ -3,6 +3,7 @@ import { use } from "react";
 import { auth } from "@clerk/nextjs/server";
 import { adminDb } from "@/firebase-admin";
 import PdfView from "@/components/PdfView";
+import Chat from "@/components/Chat";
 
 async function ChatToFilepage({ params }: { params: { id: string }}) {
   const { id } = params;
@@ -24,6 +25,9 @@ async function ChatToFilepage({ params }: { params: { id: string }}) {
       {/* right section */}
       <div className="lg:col-span-2 overflow-auto">
         {/* ChatAI */}
+        <Chat id={id} />
+
+
       </div>
 
       {/* Left section */}
